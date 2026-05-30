@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rreth Nesh — METALIKU-F</title>
+<meta name="description" content="METALIKU-F — historia, vlerat dhe procesi i punës sonë në konstruksione metalike.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-mark.png">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="modulepreload" href="assets/vendor/three.module.js">
+<link rel="modulepreload" href="assets/vendor/OrbitControls.js">
+<script type="module">
+  window.__metaliku3d = Promise.all([
+    import('./assets/vendor/three.module.js'),
+    import('./assets/vendor/OrbitControls.js'),
+  ]).then(([THREE, OC]) => ({ THREE, OrbitControls: OC.OrbitControls }));
+</script>
+<script type="module" src="assets/skeleton-3d.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <div class="topbar__l">
+      <a href="tel:+383449100300"><svg class="ic" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a14 14 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> +383 44 910 030</a>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Rr.+Indrit+Cara,+Vushtrri,+Kosovo" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Rr. Indrit Cara, Vushtrri</a>
+    </div>
+    <div class="topbar__r">
+      <a class="lk" href="kontakt.html">Kërko Ofertë</a>
+      <a class="lk" href="kalkulo.html"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><path d="M8 7h8M8 11h2M12 11h4M8 15h2M12 15h4"/></svg> Llogaritësi</a>
+    </div>
+  </div>
+</div>
+
+<header class="hdr on-dark" data-screen-label="Header">
+  <div class="wrap hdr__in">
+    <a href="index.html" class="brand" aria-label="METALIKU-F"><img class="brand__logo" src="assets/logo-nav.png" alt="METALIKU-F"></a>
+    <nav class="nav">
+      <a href="index.html">Ballina</a>
+      <a href="rreth.html" class="active">Rreth Nesh</a>
+      <a href="sherbimet.html">Ndërtesat</a>
+      <a href="projektet.html">Projektet</a>
+      <a href="kalkulo.html">Llogaritësi</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="hdr__right">
+      <span class="hdr__phone">+383 44 910 030 · +383 44 258 814</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mmenu">
+  <a href="index.html">Ballina</a>
+  <a href="rreth.html">Rreth Nesh</a>
+  <a href="sherbimet.html">Ndërtesat</a>
+  <a href="projektet.html">Projektet</a>
+  <a href="kalkulo.html">Llogaritësi</a>
+      <a href="kontakt.html">Kontakt</a>
+  <div class="mm-meta">+383 44 910 030 · +383 44 258 814 · info@metaliku-f.com</div>
+</div>
+
+<!-- PAGE HERO + 3D SKELETON -->
+<section class="phero phero--3d" data-screen-label="Hero — Rreth">
+  <div class="phero__bg ph ph--dark ph--photo" data-label="[ FOTO: FABRIKA E ÇELIKUT ]" style="background-image:url('https://plus.unsplash.com/premium_photo-1663088543643-2a1ebfc830b6?q=72&w=1920&auto=format&fit=crop')"></div>
+  <div class="wrap phero__in">
+    <div class="crumbs"><a href="index.html">Ballina</a> / <span>Rreth Nesh</span></div>
+    <span class="kicker kicker--plain" style="color:#fff">Strukturë metalike</span>
+    <p class="phero__tag">Skeleti i një hale me sistem çeliku — rrotullo me miun ose gishtin, zmadho me scroll.</p>
+  </div>
+  <div class="steel-3d" data-steel-skeleton role="application" aria-label="Model 3D interaktiv i skeletit metalik">
+    <canvas></canvas>
+    <span class="steel-3d__hint">Tërhiqe · Scroll</span>
+  </div>
+  <div class="phero__veil phero__veil--3d"></div>
+</section>
+
+<!-- STORY -->
+<section class="section" data-screen-label="Historia">
+  <div class="wrap cols">
+    <div>
+      <div class="idx" data-reveal><b>01</b> / Kush jemi</div>
+      <h2 class="h2" data-reveal data-reveal-d="1" style="margin-top:18px">Një ekip. Çdo hallkë nën kontroll.</h2>
+      <p class="lede" data-reveal data-reveal-d="2" style="margin-top:20px">Që nga viti 2008, METALIKU-F ndërton struktura metalike që mbajnë industrinë, tregtinë dhe bujqësinë e Kosovës mbi këmbë — me një ekip të vetëm përgjegjës nga fillimi në fund.</p>
+    </div>
+    <div data-reveal>
+      <p class="lede">Shumica e kompanive nënkontraktojnë gjysmën e punës. Ne jo. Inxhinierët tanë projektojnë strukturën, fabrika jonë prodhon çdo profil dhe ekipet tona e montojnë në terren. Kjo do të thotë një përgjegjësi, një afat dhe një standard cilësie — i juaji.</p>
+      <p class="lede" style="margin-top:20px">Kemi dorëzuar mbi 480 objekte në të gjithë rajonin — nga hale prodhimi 10.000 m² te markete urbane dhe depo logjistike. Çeliku ynë qëndron sepse nuk bëjmë kompromise me detajin.</p>
+      <div style="display:flex;gap:40px;margin-top:34px;flex-wrap:wrap">
+        <div><div style="font-weight:840;font-size:44px;letter-spacing:-.03em" class="mono-num"><span data-count="2008">2008</span></div><div class="flag">Themeluar</div></div>
+        <div><div style="font-weight:840;font-size:44px;letter-spacing:-.03em"><span data-count="120">0</span>+</div><div class="flag">Punëtorë & inxhinierë</div></div>
+        <div><div style="font-weight:840;font-size:44px;letter-spacing:-.03em"><span data-count="6">0</span></div><div class="flag">Linja prodhimi</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE STRIP -->
+<section class="section--tight" style="padding-top:0" data-screen-label="Foto fabrika">
+  <div class="wrap">
+    <div class="ph ph--photo clip-reveal notch" data-label="[ FOTO: PANORAMË E FABRIKËS / EKIPI NË TERREN ]" data-reveal style="aspect-ratio:21/8;background-image:url('https://plus.unsplash.com/premium_photo-1663099422090-4215b5e3ad34?q=72&w=1920&auto=format&fit=crop')">
+      <div class="corner">CV—STUDIO</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section--dark section" data-screen-label="Vlerat">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <div class="idx" data-reveal><b>02</b> / Vlerat</div>
+        <h2 class="h2 shead__t" data-reveal data-reveal-d="1">Si punojmë.</h2>
+      </div>
+    </div>
+    <div class="vals">
+      <div class="val" data-reveal><div class="val__n">01</div><h3>Siguri pa kompromis</h3><p>Çdo strukturë projektohet sipas standardeve Eurocode dhe certifikohet statikisht para prodhimit.</p></div>
+      <div class="val" data-reveal data-reveal-d="1"><div class="val__n">02</div><h3>Afate që mbahen</h3><p>98% e projekteve tona dorëzohen brenda afatit — planifikim i rreptë dhe prodhim i vetin.</p></div>
+      <div class="val" data-reveal data-reveal-d="2"><div class="val__n">03</div><h3>Çelik që zgjat</h3><p>Trajtim anti-korrozion dhe galvanizim që i jep strukturës jetë mbi 50 vjet.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" style="background:var(--paper);border-top:1px solid var(--line)" data-screen-label="Procesi">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <div class="idx" data-reveal><b>03</b> / Procesi</div>
+        <h2 class="h2 shead__t" data-reveal data-reveal-d="1">Katër hapa drejt çelësit në dorë.</h2>
+      </div>
+      <p class="lede" data-reveal style="max-width:34ch">Një rrjedhë e qartë pune, nga takimi i parë te dorëzimi përfundimtar.</p>
+    </div>
+    <div class="proc">
+      <div class="step" data-reveal><div class="step__n">01</div><h3>Konsultim & Dizajn</h3><p>Analizojmë nevojat, terrenin dhe buxhetin, pastaj propozojmë zgjidhjen strukturore.</p></div>
+      <div class="step" data-reveal data-reveal-d="1"><div class="step__n">02</div><h3>Inxhinieri & Ofertë</h3><p>Llogaritje statike, vizatime teknike dhe ofertë e detajuar brenda 48 orësh.</p></div>
+      <div class="step" data-reveal data-reveal-d="2"><div class="step__n">03</div><h3>Prodhim</h3><p>Profilet priten, saldohen dhe mbrohen kundër korrozionit në fabrikën tonë.</p></div>
+      <div class="step" data-reveal data-reveal-d="3"><div class="step__n">04</div><h3>Montim & Dorëzim</h3><p>Ekipet tona e ngrenë strukturën në terren dhe dorëzojnë objektin gati.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" data-screen-label="CTA">
+  <div class="grid-lines"></div>
+  <img class="cta__mark" src="assets/logo-mark.png" alt="">
+  <div class="wrap cta__in">
+    <div><span class="kicker">Gati të fillojmë</span><h2 class="display cta__title" data-reveal>Le ta ndërtojmë.</h2></div>
+    <div class="cta__r"><p class="lede" data-reveal>Tregoni projektin tuaj — kthejmë një ofertë teknike brenda 48 orësh.</p><a href="kontakt.html" class="btn btn--red btn--lg" data-reveal data-reveal-d="1"><span>Kërko Ofertë <span class="arw">→</span></span></a></div>
+  </div>
+</section>
+
+<footer class="ftr" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div><img class="ftr__logo" src="assets/logo-full.png" alt="Metaliku-F"><p style="margin-top:16px;max-width:34ch;color:#9a948d">Konstruksione metalike nga projektimi te montimi. Ndërtojmë me çelik që qëndron.</p></div>
+      <div><h4>Faqet</h4><ul><li><a href="index.html">Ballina</a></li><li><a href="rreth.html">Rreth Nesh</a></li><li><a href="sherbimet.html">Ndërtesat</a></li><li><a href="projektet.html">Projektet</a></li><li><a href="kalkulo.html">Llogaritësi</a>
+      <a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Ndërtesat</h4><ul><li><a href="sherbimet.html#logjistike">Logjistikë & Depo</a></li><li><a href="sherbimet.html#prodhim">Hale Prodhimi</a></li><li><a href="sherbimet.html#markete">Markete & Retail</a></li><li><a href="sherbimet.html#sport">Hale Sportive</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+383449100300">+383 44 910 030</a></li><li><a href="tel:+38344258814">+383 44 258 814</a></li><li><a href="mailto:info@metaliku-f.com">info@metaliku-f.com</a></li><li>Rr. Indrit Cara, Vushtrri</li><li>Republika e Kosovës</li></ul></div>
+    </div>
+    <div class="ftr__bottom"><span>© <span data-year>2026</span> METALIKU-F SH.P.K. — Të gjitha të drejtat e rezervuara.</span><span>PROJEKTIM · PRODHIM · MONTIM</span></div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<link rel="modulepreload" href="assets/vendor/three.module.js">
+<link rel="modulepreload" href="assets/vendor/OrbitControls.js">
+<script type="module">
+  window.__metaliku3d = Promise.all([
+    import('./assets/vendor/three.module.js'),
+    import('./assets/vendor/OrbitControls.js'),
+  ]).then(([THREE, OC]) => ({ THREE, OrbitControls: OC.OrbitControls }));
+</script>
+<script type="module" src="assets/skeleton-3d.js"></script>
+</body>
+</html>

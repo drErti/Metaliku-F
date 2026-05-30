@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9aa3ad"/>
+      <stop offset="100%" stop-color="#c8d0d8"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#g)" stroke-width="2.2" stroke-linecap="square" opacity=".92">
+    <path d="M60 300V120 M420 300V120 M60 120H420 M60 300H420"/>
+    <path d="M60 120L240 55L420 120"/>
+    <path d="M120 120L240 55L360 120"/>
+    <path d="M90 120V300 M150 120V300 M210 120V300 M270 120V300 M330 120V300 M390 120V300"/>
+    <path d="M60 120L90 300 M120 120L150 300 M180 120L210 300 M240 120L270 300 M300 120L330 300 M360 120L390 300"/>
+    <path d="M240 55V120"/>
+    <path d="M100 210H380 M80 255H400" stroke-width="1.4" opacity=".55"/>
+  </g>
+</svg>

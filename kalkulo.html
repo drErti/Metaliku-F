@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Llogaritësi i Ofertës — METALIKU-F</title>
+<meta name="description" content="Llogaritësi i ofertës nga METALIKU-F — vlerësoni sipërfaqen, peshën e çelikut, koston orientuese dhe kohën e ndërtimit për objektin tuaj.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-mark.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <div class="topbar__l">
+      <a href="tel:+383449100300"><svg class="ic" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a14 14 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> +383 44 910 030</a>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Rr.+Indrit+Cara,+Vushtrri,+Kosovo" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Rr. Indrit Cara, Vushtrri</a>
+    </div>
+    <div class="topbar__r">
+      <a class="lk" href="kontakt.html">Kërko Ofertë</a>
+      <a class="lk" href="kalkulo.html"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><path d="M8 7h8M8 11h2M12 11h4M8 15h2M12 15h4"/></svg> Llogaritësi</a>
+    </div>
+  </div>
+</div>
+
+<header class="hdr on-dark" data-screen-label="Header">
+  <div class="wrap hdr__in">
+    <a href="index.html" class="brand" aria-label="METALIKU-F"><img class="brand__logo" src="assets/logo-nav.png" alt="METALIKU-F"></a>
+    <nav class="nav">
+      <a href="index.html">Ballina</a>
+      <a href="rreth.html">Rreth Nesh</a>
+      <a href="sherbimet.html">Ndërtesat</a>
+      <a href="projektet.html">Projektet</a>
+      <a href="kalkulo.html" class="active">Llogaritësi</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="hdr__right">
+      <span class="hdr__phone">+383 44 910 030 · +383 44 258 814</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mmenu">
+  <a href="index.html">Ballina</a>
+  <a href="rreth.html">Rreth Nesh</a>
+  <a href="sherbimet.html">Ndërtesat</a>
+  <a href="projektet.html">Projektet</a>
+  <a href="kalkulo.html">Llogaritësi</a>
+  <a href="kontakt.html">Kontakt</a>
+  <div class="mm-meta">+383 44 910 030 · +383 44 258 814 · info@metaliku-f.com</div>
+</div>
+
+<section class="phero" style="padding-bottom:60px" data-screen-label="Hero — Llogaritësi">
+  <div class="phero__bg ph ph--dark ph--photo" data-label="[ FOTO: STRUKTURË ÇELIKU ]" style="background-image:url('https://images.unsplash.com/photo-1623489254637-a2dd8375243d?q=72&w=1920&auto=format&fit=crop')"></div>
+  <div class="phero__veil"></div>
+  <div class="wrap phero__in">
+    <div class="crumbs"><a href="index.html">Ballina</a> / <span>Llogaritësi</span></div>
+    <h1>Llogaritësi <em>i ofertës.</em></h1>
+    <p class="lede">Merrni një vlerësim të menjëhershëm për objektin tuaj. Zgjidhni tipin, vendosni përmasat — dhe shihni sipërfaqen, peshën e çelikut, koston orientuese dhe afatin e ndërtimit.</p>
+  </div>
+</section>
+
+<section class="section" data-screen-label="Llogaritësi">
+  <div class="wrap">
+    <div class="calc" data-calc data-reveal>
+
+      <!-- CONTROLS -->
+      <div class="calc__panel">
+        <h3>01 — Tipi i ndërtesës</h3>
+        <div class="ctypes">
+          <button class="ctype on" data-t="logjistike">Logjistikë<small>Depo & magazina</small></button>
+          <button class="ctype" data-t="prodhim">Prodhim<small>Hale industriale</small></button>
+          <button class="ctype" data-t="markete">Markete<small>Retail & tregti</small></button>
+          <button class="ctype" data-t="sport">Sport<small>Palestra & hale</small></button>
+          <button class="ctype" data-t="bujqesore">Bujqësore<small>Stalla & agro</small></button>
+          <button class="ctype" data-t="speciale">Speciale<small>Me porosi</small></button>
+        </div>
+
+        <h3 style="margin-top:30px">02 — Përmasat</h3>
+        <div style="margin-top:18px">
+          <div class="crow">
+            <div class="crow__top"><span class="crow__lab">Gjerësia (hapësira)</span><span class="crow__val"><span data-v="w">20</span><span class="u">m</span></span></div>
+            <input class="slider" type="range" min="8" max="60" step="1" value="20" data-s="w">
+          </div>
+          <div class="crow">
+            <div class="crow__top"><span class="crow__lab">Gjatësia</span><span class="crow__val"><span data-v="l">40</span><span class="u">m</span></span></div>
+            <input class="slider" type="range" min="10" max="150" step="1" value="40" data-s="l">
+          </div>
+          <div class="crow">
+            <div class="crow__top"><span class="crow__lab">Lartësia e mureve</span><span class="crow__val"><span data-v="h">7</span><span class="u">m</span></span></div>
+            <input class="slider" type="range" min="4" max="14" step="1" value="7" data-s="h">
+          </div>
+          <div class="ctoggle">
+            <div>
+              <div class="crow__lab" style="margin-bottom:5px">Izolim termik (panele sandwich)</div>
+              <div style="font-size:13px;color:var(--ink-3)">Mure & kulm me izolim</div>
+            </div>
+            <label class="switch"><input type="checkbox" data-insul checked><span class="track"></span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="calc__res">
+        <div class="deco deco--dots"></div>
+        <div class="cres">
+          <div class="cres__lab">Kosto orientuese</div>
+          <div class="cres__big" data-r="price">€2.080.000 – €2.720.000</div>
+          <div class="cres__sub" data-r="ppm">260–340 €/m²</div>
+          <div class="cres__grid">
+            <div class="cres__cell"><div class="n" data-r="area">800<span class="u">m²</span></div><div class="l">Sipërfaqja</div></div>
+            <div class="cres__cell"><div class="n" data-r="steel">36.0<span class="u">t</span></div><div class="l">Pesha e çelikut</div></div>
+            <div class="cres__cell"><div class="n" data-r="dim">20×40<span class="u">m</span></div><div class="l">Përmasat</div></div>
+            <div class="cres__cell"><div class="n" data-r="weeks">8<span class="u">javë</span></div><div class="l">Koha e ndërtimit</div></div>
+          </div>
+          <div class="cres__note">* Vlerësim orientues bazuar në mesatare tregu. Çmimi final varet nga terreni, fondamenti, pajisjet shtesë dhe specifikimet. Kërkoni ofertë të saktë pa pagesë.</div>
+          <a href="kontakt.html" class="btn btn--red"><span>Kërko Ofertë të Saktë <span class="arw">→</span></span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section--dark section--tight" data-screen-label="Si funksionon">
+  <div class="deco deco--dots"></div>
+  <div class="wrap">
+    <div class="idx" data-reveal style="margin-bottom:30px"><b>+</b> / Pas vlerësimit</div>
+    <div class="proc">
+      <div class="step" data-reveal style="background:var(--dark-2)"><div class="step__n">01</div><h3 style="color:#fff">Dërgoni kërkesën</h3><p style="color:#9a948d">Me vlerësimin si pikënisje.</p></div>
+      <div class="step" data-reveal data-reveal-d="1" style="background:var(--dark-2)"><div class="step__n">02</div><h3 style="color:#fff">Vizita në terren</h3><p style="color:#9a948d">Matje dhe analizë e vendit.</p></div>
+      <div class="step" data-reveal data-reveal-d="2" style="background:var(--dark-2)"><div class="step__n">03</div><h3 style="color:#fff">Ofertë e saktë</h3><p style="color:#9a948d">Me çmim fiks, brenda 48 orësh.</p></div>
+      <div class="step" data-reveal data-reveal-d="3" style="background:var(--dark-2)"><div class="step__n">04</div><h3 style="color:#fff">Kontrata & ndërtimi</h3><p style="color:#9a948d">Çelësi në dorë.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" data-screen-label="CTA">
+  <div class="grid-lines"></div>
+  <img class="cta__mark" src="assets/logo-mark.png" alt="">
+  <div class="wrap cta__in">
+    <div><span class="kicker">Gati për një ofertë të saktë?</span><h2 class="display cta__title" data-reveal>Le ta ndërtojmë.</h2></div>
+    <div class="cta__r"><p class="lede" data-reveal>Dërgoni vlerësimin tuaj — kthejmë një ofertë teknike me çmim fiks brenda 48 orësh.</p><a href="kontakt.html" class="btn btn--red btn--lg" data-reveal data-reveal-d="1"><span>Kërko Ofertë <span class="arw">→</span></span></a></div>
+  </div>
+</section>
+
+<footer class="ftr" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div><img class="ftr__logo" src="assets/logo-full.png" alt="Metaliku-F"><p style="margin-top:16px;max-width:34ch;color:#9a948d">Ndërtim me sistem çeliku, nga projektimi te montimi. Ndërtesa që qëndrojnë për dekada.</p></div>
+      <div><h4>Faqet</h4><ul><li><a href="index.html">Ballina</a></li><li><a href="rreth.html">Rreth Nesh</a></li><li><a href="sherbimet.html">Ndërtesat</a></li><li><a href="projektet.html">Projektet</a></li><li><a href="kalkulo.html">Llogaritësi</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Ndërtesat</h4><ul><li><a href="sherbimet.html#logjistike">Logjistikë & Depo</a></li><li><a href="sherbimet.html#prodhim">Hale Prodhimi</a></li><li><a href="sherbimet.html#markete">Markete & Retail</a></li><li><a href="sherbimet.html#sport">Hale Sportive</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+383449100300">+383 44 910 030</a></li><li><a href="tel:+38344258814">+383 44 258 814</a></li><li><a href="mailto:info@metaliku-f.com">info@metaliku-f.com</a></li><li>Rr. Indrit Cara, Vushtrri</li><li>Republika e Kosovës</li></ul></div>
+    </div>
+    <div class="ftr__bottom"><span>© <span data-year>2026</span> METALIKU-F SH.P.K. — Të gjitha të drejtat e rezervuara.</span><span>PROJEKTIM · PRODHIM · MONTIM</span></div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
