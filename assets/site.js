@@ -100,8 +100,9 @@
 
   /* ---- Projects filter (projektet.html) ---- */
   var filterBar = document.querySelector('[data-filter-bar]');
-  if(filterBar){
-    var items = document.querySelectorAll('[data-cat]');
+  var gal = document.querySelector('.gal');
+  if(filterBar && gal){
+    var items = gal.querySelectorAll('[data-cat]');
     filterBar.querySelectorAll('button').forEach(function(b){
       b.addEventListener('click', function(){
         filterBar.querySelectorAll('button').forEach(function(x){x.classList.remove('is-on');});
@@ -109,7 +110,7 @@
         var f = b.getAttribute('data-f');
         items.forEach(function(it){
           var show = (f === 'all' || it.getAttribute('data-cat') === f);
-          it.style.display = show ? '' : 'none';
+          it.classList.toggle('is-filtered-out', !show);
         });
       });
     });
