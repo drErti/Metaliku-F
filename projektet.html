@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <title>Projektet — METALIKU-F</title>
-<meta name="description" content="Portofoli i METALIKU-F: hale industriale, markete, fabrika dhe depo të realizuara në Kosovë.">
+<meta name="description" content="Portofoli i METALIKU-F: konstruksione metalike, dyer e dritare, galvanizim, rezervuarë dhe produkte çeliku të realizuara në Kosovë.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -32,7 +34,7 @@
     <nav class="nav">
       <a href="index.html">Ballina</a>
       <a href="rreth.html">Rreth Nesh</a>
-      <a href="sherbimet.html">Ndërtesat</a>
+      <a href="sherbimet.html">Shërbimet</a>
       <a href="projektet.html" class="active">Projektet</a>
       <a href="kalkulo.html">Llogaritësi</a>
       <a href="kontakt.html">Kontakt</a>
@@ -46,20 +48,61 @@
 <div class="mmenu">
   <a href="index.html">Ballina</a>
   <a href="rreth.html">Rreth Nesh</a>
-  <a href="sherbimet.html">Ndërtesat</a>
+  <a href="sherbimet.html">Shërbimet</a>
   <a href="projektet.html">Projektet</a>
   <a href="kalkulo.html">Llogaritësi</a>
       <a href="kontakt.html">Kontakt</a>
   <div class="mm-meta">+383 44 910 030 · +383 44 258 814 · info@metaliku-f.com</div>
 </div>
 
-<section class="phero" data-screen-label="Hero — Projektet">
-  <div class="phero__bg ph ph--dark ph--photo" style="background-image:url('assets/projects/p10.jpg')"></div>
-  <div class="phero__veil"></div>
-  <div class="wrap phero__in">
-    <div class="crumbs"><a href="index.html">Ballina</a> / <span>Projektet</span></div>
-    <h1>Çelik <em>në veprim.</em></h1>
-    <p class="lede">Një përzgjedhje nga projektet tona. Filtroni sipas kategorisë për të parë llojin që ju intereson.</p>
+<style>
+/* ── PHDR ENHANCED HERO ── */
+.phdr{position:relative;background:#0d0d0d;padding:152px 0 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08)}
+.phdr::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:58px 58px;pointer-events:none}
+.phdr__wm{position:absolute;right:-1%;top:50%;transform:translateY(-50%);font-family:var(--mono,monospace);font-weight:700;color:rgba(255,255,255,.028);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.04em;animation:wmIn 1.4s ease .08s both}
+@keyframes wmIn{from{opacity:0;transform:translateY(-46%) scale(.94)}to{opacity:1;transform:translateY(-50%) scale(1)}}
+.phdr__in{position:relative;z-index:2}
+.phdr__bc{font-family:var(--mono,monospace);font-size:11px;color:#9a948d;letter-spacing:.08em;margin-bottom:20px;animation:phdrFade .7s ease .04s both}
+.phdr__bc a{color:#9a948d;text-decoration:none}.phdr__bc a:hover{color:#fff}
+.phdr__h{font-size:clamp(2rem,4.5vw,4rem);font-weight:800;color:#fff;line-height:1.02;letter-spacing:-.025em;margin:0;animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .12s both}
+.phdr__accent{height:2px;background:var(--red,#c41e1e);margin:20px 0 22px;width:0;animation:accentDraw .9s cubic-bezier(.16,1,.3,1) .32s forwards}
+@keyframes accentDraw{to{width:52px}}
+.phdr__p{color:#9a948d;font-size:.93rem;line-height:1.65;max-width:54ch;margin:0;animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .24s both}
+.phdr__tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;animation:phdrUp .7s cubic-bezier(.16,1,.3,1) .38s both}
+.phdr__tag{font-family:var(--mono,monospace);font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.65);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:5px 14px;text-transform:uppercase;transition:color .22s,border-color .22s,background .22s}
+.phdr__tag:hover{color:#fff;border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.11)}.phdr__tag--hi{color:#ff5252;background:rgba(196,30,30,.14);border-color:rgba(196,30,30,.55)}
+.phdr__stats{display:flex;flex-wrap:wrap;margin-top:48px;border-top:1px solid rgba(255,255,255,.07);padding:28px 0;animation:phdrUp .65s cubic-bezier(.16,1,.3,1) .52s both}
+.phdr__stat{padding-right:44px;margin-right:44px;border-right:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.phdr__stat:last-child{border-right:none;padding-right:0;margin-right:0}
+.phdr__sn{font-family:var(--mono,monospace);font-size:clamp(18px,2.4vw,30px);font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1}
+.phdr__sn em{color:var(--red,#c41e1e);font-style:normal}
+.phdr__sl{font-family:var(--mono,monospace);font-size:10px;letter-spacing:.1em;color:#9a948d;text-transform:uppercase;margin-top:7px}
+@keyframes phdrUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes phdrFade{from{opacity:0}to{opacity:1}}
+@media(max-width:720px){.phdr{padding:132px 0 0}.phdr__stat{padding-right:28px;margin-right:28px}.phdr__stat:nth-child(2n){border-right:none;padding-right:0;margin-right:0}}
+@media(max-width:480px){.phdr__stats{gap:20px 0}.phdr__stat{min-width:45%;border-right:none;padding-right:0;margin-right:0}}
+</style>
+<!-- PAGE HEADER -->
+<section class="phdr">
+  <div class="phdr__wm" aria-hidden="true" style="font-size:clamp(100px,18vw,230px)">480+</div>
+  <div class="wrap phdr__in">
+    <div class="phdr__bc"><a href="index.html">Ballina</a> / <span>Projektet</span></div>
+    <h1 class="phdr__h">ÇELIK NË VEPRIM.</h1>
+    <div class="phdr__accent"></div>
+    <p class="phdr__p">Një përzgjedhje nga porositë tona — filtroni sipas kategorisë për të parë shërbimin që ju intereson.</p>
+    <div class="phdr__tags">
+      <span class="phdr__tag phdr__tag--hi">480+ Projekte</span>
+      <span class="phdr__tag">Konstruksione</span>
+      <span class="phdr__tag">Dyer & Dritare</span>
+      <span class="phdr__tag">Trajtim & Veshje</span>
+      <span class="phdr__tag">Rezervuarë</span>
+    </div>
+    <div class="phdr__stats">
+      <div class="phdr__stat"><div class="phdr__sn">480<em>+</em></div><div class="phdr__sl">Projekte</div></div>
+      <div class="phdr__stat"><div class="phdr__sn">12</div><div class="phdr__sl">Rajone</div></div>
+      <div class="phdr__stat"><div class="phdr__sn">38<em>k t</em></div><div class="phdr__sl">Çelik i Montuar</div></div>
+      <div class="phdr__stat"><div class="phdr__sn">16</div><div class="phdr__sl">Vite Përvojë</div></div>
+    </div>
   </div>
 </section>
 
@@ -67,61 +110,61 @@
   <div class="wrap">
     <div class="filter" data-filter-bar data-reveal>
       <button class="is-on" data-f="all">Të gjitha</button>
-      <button data-f="hale">Hale Industriale</button>
-      <button data-f="market">Markete</button>
-      <button data-f="fabrika">Fabrika</button>
-      <button data-f="depo">Depo</button>
-      <button data-f="bujqesore">Bujqësore</button>
+      <button data-f="hale">Konstruksione</button>
+      <button data-f="market">Dyer & Dritare</button>
+      <button data-f="fabrika">Trajtim & Veshje</button>
+      <button data-f="depo">Rezervuarë</button>
+      <button data-f="bujqesore">Riparim</button>
     </div>
 
     <div class="gal">
-      <a href="kontakt.html" class="proj" data-cat="fabrika">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p11.jpg" alt="Kompleksi Prodhues — Ferizaj" width="800" height="600" decoding="async"><div class="corner">CV—112 / FERIZAJ</div></div>
-        <div class="proj__cap" data-reveal><span class="tag">Fabrikë</span><h3 class="h3">Kompleksi Prodhues</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="hale" data-reveal>
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p11.jpg" alt="Konstruksion Metalik — Ferizaj" width="800" height="600" decoding="async"><div class="corner">CV—112 / FERIZAJ</div></div>
+        <div class="proj__cap"><span class="tag">Konstruksione</span><h3 class="h3">Konstruksion Industrial</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="market">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p02.jpg" alt="Qendra Tregtare Lindja — Prishtinë" width="800" height="600" decoding="async"><div class="corner">CV—098 / PRISHTINË</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="1"><span class="tag">Market</span><h3 class="h3">Qendra Tregtare Lindja</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="market" data-reveal data-reveal-d="1">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p02.jpg" alt="Dyer Metalike — Prishtinë" width="800" height="600" decoding="async"><div class="corner">CV—098 / PRISHTINË</div></div>
+        <div class="proj__cap"><span class="tag">Dyer & Dritare</span><h3 class="h3">Dyer Industriale Metalike</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="depo">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p04.jpg" alt="Qendra Logjistike — Gjilan" width="800" height="600" decoding="async"><div class="corner">CV—076 / GJILAN</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="2"><span class="tag">Depo</span><h3 class="h3">Qendra Logjistike</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="depo" data-reveal data-reveal-d="2">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p04.jpg" alt="Rezervuarë Metalikë — Gjilan" width="800" height="600" decoding="async"><div class="corner">CV—076 / GJILAN</div></div>
+        <div class="proj__cap"><span class="tag">Rezervuarë</span><h3 class="h3">Rezervuarë Industrialë</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="hale">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p03.jpg" alt="Hali i Përpunimit — Pejë" width="800" height="600" decoding="async"><div class="corner">CV—134 / PEJË</div></div>
-        <div class="proj__cap" data-reveal><span class="tag">Hale</span><h3 class="h3">Hali i Përpunimit</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="hale" data-reveal>
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p03.jpg" alt="Konstruksion Metalik — Pejë" width="800" height="600" decoding="async"><div class="corner">CV—134 / PEJË</div></div>
+        <div class="proj__cap"><span class="tag">Konstruksione</span><h3 class="h3">Strukturë Çeliku</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="bujqesore">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p12.jpg" alt="Ferma Blegtorale — Vushtrri" width="800" height="600" decoding="async"><div class="corner">CV—061 / VUSHTRRI</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="1"><span class="tag">Bujqësore</span><h3 class="h3">Ferma Blegtorale</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="bujqesore" data-reveal data-reveal-d="1">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p12.jpg" alt="Riparim Metalesh — Vushtrri" width="800" height="600" decoding="async"><div class="corner">CV—061 / VUSHTRRI</div></div>
+        <div class="proj__cap"><span class="tag">Riparim</span><h3 class="h3">Riparim Konstruksioni</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="market">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p07.jpg" alt="Supermarket Qendror — Prizren" width="800" height="600" decoding="async"><div class="corner">CV—120 / PRIZREN</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="2"><span class="tag">Market</span><h3 class="h3">Supermarket Qendror</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="market" data-reveal data-reveal-d="2">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p07.jpg" alt="Dritare Metalike — Prizren" width="800" height="600" decoding="async"><div class="corner">CV—120 / PRIZREN</div></div>
+        <div class="proj__cap"><span class="tag">Dyer & Dritare</span><h3 class="h3">Dritare Metalike me Izolim</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="fabrika">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p05.jpg" alt="Linja Ushqimore — Fushë Kosovë" width="800" height="600" decoding="async"><div class="corner">CV—143 / FUSHË KOSOVË</div></div>
-        <div class="proj__cap" data-reveal><span class="tag">Fabrikë</span><h3 class="h3">Linja Ushqimore</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="fabrika" data-reveal>
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p05.jpg" alt="Galvanizim & Veshje — Fushë Kosovë" width="800" height="600" decoding="async"><div class="corner">CV—143 / FUSHË KOSOVË</div></div>
+        <div class="proj__cap"><span class="tag">Trajtim & Veshje</span><h3 class="h3">Galvanizim Industrial</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="hale">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p08.jpg" alt="Hali i Magazinimit — Mitrovicë" width="800" height="600" decoding="async"><div class="corner">CV—088 / MITROVICË</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="1"><span class="tag">Hale</span><h3 class="h3">Hali i Magazinimit</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="hale" data-reveal data-reveal-d="1">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p08.jpg" alt="Konstruksion Metalik — Mitrovicë" width="800" height="600" decoding="async"><div class="corner">CV—088 / MITROVICË</div></div>
+        <div class="proj__cap"><span class="tag">Konstruksione</span><h3 class="h3">Skelet Çeliku</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="depo">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p04.jpg" alt="Depo Frigoriferike — Suharekë" width="800" height="600" decoding="async"><div class="corner">CV—129 / SUHAREKË</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="2"><span class="tag">Depo</span><h3 class="h3">Depo Frigoriferike</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="depo" data-reveal data-reveal-d="2">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p04.jpg" alt="Kontejnerë Metalikë — Suharekë" width="800" height="600" decoding="async"><div class="corner">CV—129 / SUHAREKË</div></div>
+        <div class="proj__cap"><span class="tag">Rezervuarë</span><h3 class="h3">Kontejnerë & Tankerë</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="hale">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p01.jpg" alt="Kornizë metalike — montim" width="800" height="600" decoding="async"><div class="corner">CV—105 / MONTIM</div></div>
-        <div class="proj__cap" data-reveal><span class="tag">Hale</span><h3 class="h3">Kornizë &amp; Montim</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="hale" data-reveal>
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p01.jpg" alt="Montim Konstruksioni Metalik" width="800" height="600" decoding="async"><div class="corner">CV—105 / MONTIM</div></div>
+        <div class="proj__cap"><span class="tag">Konstruksione</span><h3 class="h3">Montim &amp; Instalim</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="fabrika">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p06.jpg" alt="Objekt në zhvillim" width="800" height="600" decoding="async"><div class="corner">CV—151 / AKTIV</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="1"><span class="tag">Fabrikë</span><h3 class="h3">Objekt në Zhvillim</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="fabrika" data-reveal data-reveal-d="1">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p06.jpg" alt="Lyerje Elektrostatike — aktiv" width="800" height="600" decoding="async"><div class="corner">CV—151 / AKTIV</div></div>
+        <div class="proj__cap"><span class="tag">Trajtim & Veshje</span><h3 class="h3">Lyerje Elektrostatike</h3></div>
       </a>
-      <a href="kontakt.html" class="proj" data-cat="hale">
-        <div class="proj__img ph ph--photo"><img src="assets/projects/p09.jpg" alt="Hali Sportive — Lipjan" width="800" height="600" decoding="async"><div class="corner">CV—162 / LIPJAN</div></div>
-        <div class="proj__cap" data-reveal data-reveal-d="2"><span class="tag">Hale</span><h3 class="h3">Hali Sportive</h3></div>
+      <a href="kontakt.html" class="proj" data-cat="bujqesore" data-reveal data-reveal-d="2">
+        <div class="proj__img ph ph--photo"><img src="assets/projects/p09.jpg" alt="Riparim Produktesh Metalike — Lipjan" width="800" height="600" decoding="async"><div class="corner">CV—162 / LIPJAN</div></div>
+        <div class="proj__cap"><span class="tag">Riparim</span><h3 class="h3">Riparim Metalesh</h3></div>
       </a>
     </div>
   </div>
@@ -142,8 +185,8 @@
   <div class="grid-lines"></div>
   <img class="cta__mark" src="assets/logo-mark.png" alt="">
   <div class="wrap cta__in">
-    <div><span class="kicker">Projekti juaj i radhës</span><h2 class="display cta__title" data-reveal>Bëhemi pjesë.</h2></div>
-    <div class="cta__r"><p class="lede" data-reveal>Le ta shtojmë objektin tuaj në këtë listë. Filloni me një ofertë.</p><a href="kontakt.html" class="btn btn--red btn--lg" data-reveal data-reveal-d="1"><span>Kërko Ofertë <span class="arw">→</span></span></a></div>
+    <div><span class="kicker">Porosia juaj e radhës</span><h2 class="display cta__title" data-reveal>BËHEMI PJESË.</h2></div>
+    <div class="cta__r"><p class="lede" data-reveal>Le ta shtojmë produktin tuaj në këtë listë. Filloni me një ofertë.</p><a href="kontakt.html" class="btn btn--red btn--lg" data-reveal data-reveal-d="1"><span>Kërko Ofertë <span class="arw">→</span></span></a></div>
   </div>
 </section>
 
@@ -151,15 +194,45 @@
   <div class="wrap">
     <div class="ftr__top">
       <div><img class="ftr__logo" src="assets/logo-full.png" alt="Metaliku-F"><p style="margin-top:16px;max-width:34ch;color:#9a948d">Konstruksione metalike nga projektimi te montimi. Ndërtojmë me çelik që qëndron.</p></div>
-      <div><h4>Faqet</h4><ul><li><a href="index.html">Ballina</a></li><li><a href="rreth.html">Rreth Nesh</a></li><li><a href="sherbimet.html">Ndërtesat</a></li><li><a href="projektet.html">Projektet</a></li><li><a href="kalkulo.html">Llogaritësi</a>
+      <div><h4>Faqet</h4><ul><li><a href="index.html">Ballina</a></li><li><a href="rreth.html">Rreth Nesh</a></li><li><a href="sherbimet.html">Shërbimet</a></li><li><a href="projektet.html">Projektet</a></li><li><a href="kalkulo.html">Llogaritësi</a>
       <a href="kontakt.html">Kontakt</a></li></ul></div>
-      <div><h4>Ndërtesat</h4><ul><li><a href="sherbimet.html#logjistike">Logjistikë & Depo</a></li><li><a href="sherbimet.html#prodhim">Hale Prodhimi</a></li><li><a href="sherbimet.html#markete">Markete & Retail</a></li><li><a href="sherbimet.html#sport">Hale Sportive</a></li></ul></div>
+      <div><h4>Shërbimet</h4><ul><li><a href="sherbimet.html#konstruksione">Konstruksione Metalike</a></li><li><a href="sherbimet.html#dyer-dritare">Dyer &amp; Dritare Metalike</a></li><li><a href="sherbimet.html#veshja">Trajtim &amp; Veshje</a></li><li><a href="sherbimet.html#riparim">Riparim Metalesh</a></li></ul></div>
       <div><h4>Kontakt</h4><ul><li><a href="tel:+383449100300">+383 44 910 030</a></li><li><a href="tel:+38344258814">+383 44 258 814</a></li><li><a href="mailto:info@metaliku-f.com">info@metaliku-f.com</a></li><li>Rr. Indrit Cara, Vushtrri</li><li>Republika e Kosovës</li></ul></div>
     </div>
     <div class="ftr__bottom"><span>© <span data-year>2026</span> METALIKU-F SH.P.K. — Të gjitha të drejtat e rezervuara.</span><span>PROJEKTIM · PRODHIM · MONTIM</span></div>
   </div>
 </footer>
 
+<style>
+/* ── PROJEKTET: page-load & scroll animations ── */
+.phdr__bc{animation:phdrFade .7s ease .04s both}
+.phdr__h{animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .12s both}
+.phdr__p{animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .28s both}
+@keyframes phdrUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes phdrFade{from{opacity:0}to{opacity:1}}
+
+/* filter button bar stagger entrance */
+[data-filter-bar] button{opacity:0;animation:fbIn .5s cubic-bezier(.16,1,.3,1) both}
+[data-filter-bar] button:nth-child(1){animation-delay:.06s}
+[data-filter-bar] button:nth-child(2){animation-delay:.13s}
+[data-filter-bar] button:nth-child(3){animation-delay:.20s}
+[data-filter-bar] button:nth-child(4){animation-delay:.27s}
+[data-filter-bar] button:nth-child(5){animation-delay:.34s}
+@keyframes fbIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* project card image zoom on hover */
+.proj__img{overflow:hidden}
+.proj__img img{transition:transform .7s cubic-bezier(.16,1,.3,1);will-change:transform}
+.proj:hover .proj__img img{transform:scale(1.06)}
+
+/* project card title slide on hover */
+.proj__cap .h3{transition:color .28s ease,transform .3s cubic-bezier(.16,1,.3,1)}
+.proj:hover .proj__cap .h3{color:var(--red,#c41e1e);transform:translateX(6px)}
+
+/* stat number pop */
+.stat[data-reveal].in .stat__n{animation:statPop .55s cubic-bezier(.16,1,.3,1) .1s both}
+@keyframes statPop{from{transform:scale(.86)}to{transform:scale(1)}}
+</style>
 <script src="assets/site.js"></script>
 </body>
 </html>

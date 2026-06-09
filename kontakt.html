@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <title>Kontakt — METALIKU-F</title>
 <meta name="description" content="Kontaktoni METALIKU-F për një ofertë teknike falas për konstruksionin tuaj metalik.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +34,7 @@
     <nav class="nav">
       <a href="index.html">Ballina</a>
       <a href="rreth.html">Rreth Nesh</a>
-      <a href="sherbimet.html">Ndërtesat</a>
+      <a href="sherbimet.html">Shërbimet</a>
       <a href="projektet.html">Projektet</a>
       <a href="kalkulo.html">Llogaritësi</a>
       <a href="kontakt.html" class="active">Kontakt</a>
@@ -46,20 +48,59 @@
 <div class="mmenu">
   <a href="index.html">Ballina</a>
   <a href="rreth.html">Rreth Nesh</a>
-  <a href="sherbimet.html">Ndërtesat</a>
+  <a href="sherbimet.html">Shërbimet</a>
   <a href="projektet.html">Projektet</a>
   <a href="kalkulo.html">Llogaritësi</a>
       <a href="kontakt.html">Kontakt</a>
   <div class="mm-meta">+383 44 910 030 · +383 44 258 814 · info@metaliku-f.com</div>
 </div>
 
-<section class="phero" style="padding-bottom:60px" data-screen-label="Hero — Kontakt">
-  <div class="phero__bg ph ph--dark ph--photo" data-label="[ FOTO: ZYRA / FABRIKA ]" style="background-image:url('https://images.unsplash.com/photo-1557143930-d4e7a86a194f?q=72&w=1920&auto=format&fit=crop')"></div>
-  <div class="phero__veil"></div>
-  <div class="wrap phero__in">
-    <div class="crumbs"><a href="index.html">Ballina</a> / <span>Kontakt</span></div>
-    <h1>Kërko <em>ofertë.</em></h1>
-    <p class="lede">Plotësoni formularin ose na shkruani drejtpërdrejt. Kthejmë një ofertë teknike pa pagesë brenda 48 orësh pune.</p>
+<style>
+/* ── PHDR ENHANCED HERO ── */
+.phdr{position:relative;background:#0d0d0d;padding:152px 0 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08)}
+.phdr::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:58px 58px;pointer-events:none}
+.phdr__wm{position:absolute;right:-1%;top:50%;transform:translateY(-50%);font-family:var(--mono,monospace);font-weight:700;color:rgba(255,255,255,.028);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.04em;animation:wmIn 1.4s ease .08s both}
+@keyframes wmIn{from{opacity:0;transform:translateY(-46%) scale(.94)}to{opacity:1;transform:translateY(-50%) scale(1)}}
+.phdr__in{position:relative;z-index:2}
+.phdr__bc{font-family:var(--mono,monospace);font-size:11px;color:#9a948d;letter-spacing:.08em;margin-bottom:20px;animation:phdrFade .7s ease .04s both}
+.phdr__bc a{color:#9a948d;text-decoration:none}.phdr__bc a:hover{color:#fff}
+.phdr__h{font-size:clamp(2rem,4.5vw,4rem);font-weight:800;color:#fff;line-height:1.02;letter-spacing:-.025em;margin:0;animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .12s both}
+.phdr__accent{height:2px;background:var(--red,#c41e1e);margin:20px 0 22px;width:0;animation:accentDraw .9s cubic-bezier(.16,1,.3,1) .32s forwards}
+@keyframes accentDraw{to{width:52px}}
+.phdr__p{color:#9a948d;font-size:.93rem;line-height:1.65;max-width:54ch;margin:0;animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .24s both}
+.phdr__tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;animation:phdrUp .7s cubic-bezier(.16,1,.3,1) .38s both}
+.phdr__tag{font-family:var(--mono,monospace);font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.65);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:5px 14px;text-transform:uppercase;transition:color .22s,border-color .22s,background .22s}
+.phdr__tag:hover{color:#fff;border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.11)}.phdr__tag--hi{color:#ff5252;background:rgba(196,30,30,.14);border-color:rgba(196,30,30,.55)}
+.phdr__stats{display:flex;flex-wrap:wrap;margin-top:48px;border-top:1px solid rgba(255,255,255,.07);padding:28px 0;animation:phdrUp .65s cubic-bezier(.16,1,.3,1) .52s both}
+.phdr__stat{padding-right:44px;margin-right:44px;border-right:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.phdr__stat:last-child{border-right:none;padding-right:0;margin-right:0}
+.phdr__sn{font-family:var(--mono,monospace);font-size:clamp(18px,2.4vw,30px);font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1}
+.phdr__sn em{color:var(--red,#c41e1e);font-style:normal}
+.phdr__sl{font-family:var(--mono,monospace);font-size:10px;letter-spacing:.1em;color:#9a948d;text-transform:uppercase;margin-top:7px}
+@keyframes phdrUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes phdrFade{from{opacity:0}to{opacity:1}}
+@media(max-width:720px){.phdr{padding:132px 0 0}.phdr__stat{padding-right:28px;margin-right:28px}.phdr__stat:nth-child(2n){border-right:none;padding-right:0;margin-right:0}}
+@media(max-width:480px){.phdr__stats{gap:20px 0}.phdr__stat{min-width:45%;border-right:none;padding-right:0;margin-right:0}}
+</style>
+<!-- PAGE HEADER -->
+<section class="phdr">
+  <div class="phdr__wm" aria-hidden="true" style="font-size:clamp(110px,20vw,280px)">48h</div>
+  <div class="wrap phdr__in">
+    <div class="phdr__bc"><a href="index.html">Ballina</a> / <span>Kontakt</span></div>
+    <h1 class="phdr__h">KËRKO OFERTË.</h1>
+    <div class="phdr__accent"></div>
+    <p class="phdr__p">Plotësoni formularin ose na shkruani drejtpërdrejt — kthejmë ofertë teknike pa pagesë brenda 48 orësh pune.</p>
+    <div class="phdr__tags">
+      <span class="phdr__tag phdr__tag--hi">Falas · Pa angazhim</span>
+      <span class="phdr__tag">Brenda 48 orësh</span>
+      <span class="phdr__tag">Ofertë teknike</span>
+      <span class="phdr__tag">EN 1090 · Certifikuar</span>
+    </div>
+    <div class="phdr__stats">
+      <div class="phdr__stat"><div class="phdr__sn">48<em>h</em></div><div class="phdr__sl">Koha e Përgjigjes</div></div>
+      <div class="phdr__stat"><div class="phdr__sn">0<em>€</em></div><div class="phdr__sl">Ofertë Falas</div></div>
+      <div class="phdr__stat"><div class="phdr__sn" style="font-size:clamp(13px,1.6vw,20px)">+383 44 910 030</div><div class="phdr__sl">Telefon Direkt</div></div>
+    </div>
   </div>
 </section>
 
@@ -93,13 +134,14 @@
           <label>Lloji i objektit <span class="req">*</span></label>
           <select name="lloji" required>
             <option value="">Zgjidhni një kategori…</option>
-            <option>Hale Industriale</option>
-            <option>Market / Qendër Tregtare</option>
-            <option>Fabrikë / Prodhim</option>
-            <option>Depo / Logjistikë</option>
-            <option>Strukturë Bujqësore</option>
-            <option>Fasadë / Mbulesë</option>
-            <option>Tjetër</option>
+            <option>Konstruksione Metalike (2511)</option>
+            <option>Dyer &amp; Dritare Metalike (2512)</option>
+            <option>Struktura të Tjera Metalike (2529)</option>
+            <option>Trajtim &amp; Veshje Metalesh (2561/2562)</option>
+            <option>Produkte të Tjera Metalike (2591/2599)</option>
+            <option>Riparim Produktesh Metalike (3311)</option>
+            <option>Tregti Metalesh &amp; Profilash (4672)</option>
+            <option>Tjetër / Me Porosi</option>
           </select>
           <span class="msg">Zgjidhni një kategori.</span>
         </div>
@@ -144,15 +186,43 @@
   <div class="wrap">
     <div class="ftr__top">
       <div><img class="ftr__logo" src="assets/logo-full.png" alt="Metaliku-F"><p style="margin-top:16px;max-width:34ch;color:#9a948d">Konstruksione metalike nga projektimi te montimi. Ndërtojmë me çelik që qëndron.</p></div>
-      <div><h4>Faqet</h4><ul><li><a href="index.html">Ballina</a></li><li><a href="rreth.html">Rreth Nesh</a></li><li><a href="sherbimet.html">Ndërtesat</a></li><li><a href="projektet.html">Projektet</a></li><li><a href="kalkulo.html">Llogaritësi</a>
+      <div><h4>Faqet</h4><ul><li><a href="index.html">Ballina</a></li><li><a href="rreth.html">Rreth Nesh</a></li><li><a href="sherbimet.html">Shërbimet</a></li><li><a href="projektet.html">Projektet</a></li><li><a href="kalkulo.html">Llogaritësi</a>
       <a href="kontakt.html">Kontakt</a></li></ul></div>
-      <div><h4>Ndërtesat</h4><ul><li><a href="sherbimet.html#logjistike">Logjistikë & Depo</a></li><li><a href="sherbimet.html#prodhim">Hale Prodhimi</a></li><li><a href="sherbimet.html#markete">Markete & Retail</a></li><li><a href="sherbimet.html#sport">Hale Sportive</a></li></ul></div>
+      <div><h4>Shërbimet</h4><ul><li><a href="sherbimet.html#konstruksione">Konstruksione Metalike</a></li><li><a href="sherbimet.html#dyer-dritare">Dyer &amp; Dritare Metalike</a></li><li><a href="sherbimet.html#veshja">Trajtim &amp; Veshje</a></li><li><a href="sherbimet.html#riparim">Riparim Metalesh</a></li></ul></div>
       <div><h4>Kontakt</h4><ul><li><a href="tel:+383449100300">+383 44 910 030</a></li><li><a href="tel:+38344258814">+383 44 258 814</a></li><li><a href="mailto:info@metaliku-f.com">info@metaliku-f.com</a></li><li>Rr. Indrit Cara, Vushtrri</li><li>Republika e Kosovës</li></ul></div>
     </div>
     <div class="ftr__bottom"><span>© <span data-year>2026</span> METALIKU-F SH.P.K. — Të gjitha të drejtat e rezervuara.</span><span>PROJEKTIM · PRODHIM · MONTIM</span></div>
   </div>
 </footer>
 
+<style>
+/* ── KONTAKT: page-load & scroll animations ── */
+.phdr__bc{animation:phdrFade .7s ease .04s both}
+.phdr__h{animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .12s both}
+.phdr__p{animation:phdrUp .85s cubic-bezier(.16,1,.3,1) .28s both}
+@keyframes phdrUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes phdrFade{from{opacity:0}to{opacity:1}}
+
+/* form fields stagger slide-up within the revealed form */
+.field{transform:translateY(18px);transition:transform .52s cubic-bezier(.16,1,.3,1) var(--d,0s)}
+[data-quote].in .field{transform:none}
+
+/* input/select/textarea focus glow ring */
+.field input:focus,.field select:focus,.field textarea:focus{box-shadow:0 0 0 3px rgba(196,30,30,.14);outline:none}
+
+/* contact info rows drift in from left */
+.cinfo__row{transform:translateX(-12px);transition:transform .46s cubic-bezier(.16,1,.3,1) var(--d,0s)}
+[data-reveal].in .cinfo__row{transform:none}
+</style>
+<script>
+(function(){
+  /* stagger delays for form fields */
+  var form = document.querySelector('[data-quote]');
+  if(form) form.querySelectorAll('.field').forEach(function(f,i){f.style.setProperty('--d',(i*.085+.1)+'s')});
+  /* stagger delays for contact info rows */
+  document.querySelectorAll('.cinfo__row').forEach(function(r,i){r.style.setProperty('--d',(i*.07+.15)+'s')});
+})();
+</script>
 <script src="assets/site.js"></script>
 </body>
 </html>

@@ -227,4 +227,55 @@
     if(ins) ins.addEventListener('change', function(){ st.insul = ins.checked; render(); });
     render();
   }
+
+  /* ---- Process steps: staircase animation ---- */
+  function triggerSteps(proc){
+    if(proc._stepsTriggered) return;
+    proc._stepsTriggered = true;
+    proc.classList.add('steps-in');
+    proc.querySelectorAll('.step').forEach(function(step, i){
+      setTimeout(function(){ step.classList.add('in'); }, 50 + i * 140);
+    });
+  }
+  var procs = document.querySelectorAll('[data-steps]');
+  procs.forEach(function(p){
+    if('IntersectionObserver' in window){
+      var procIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting) return;
+          triggerSteps(e.target);
+          procIo.disconnect();
+        });
+      }, {threshold:.05});
+      procIo.observe(p);
+    } else {
+      triggerSteps(p);
+    }
+  });
+
+  /* ---- Page transition ---- */
+  var veil = document.createElement('div');
+  veil.id = 'pg-veil';
+  document.body.appendChild(veil);
+
+  // Fade in: remove the opaque cover one frame after paint
+  requestAnimationFrame(function(){
+    requestAnimationFrame(function(){ veil.classList.add('pg-in'); });
+  });
+
+  // Fade out before navigating to an internal link
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href]');
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href) return;
+    // Skip anchors, external links, tel/mailto, _blank targets
+    if(href.charAt(0)==='#') return;
+    if(/^(https?:)?\/\/|^tel:|^mailto:/i.test(href)) return;
+    if(a.target && a.target.toLowerCase()==='_blank') return;
+    e.preventDefault();
+    veil.classList.remove('pg-in');
+    setTimeout(function(){ window.location.href = href; }, 360);
+  });
+
 })();
